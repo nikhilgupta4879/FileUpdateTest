@@ -1,0 +1,4 @@
+update Integration.bill.BillImage set externalRefGUID = null where billImageId = '1000001' and externalRefGUID='9b945784-366a-4432-b7d2-303a203675dd';
+update Integration.bill.BillImage set externalRefGUID = null where billImageId = '1000019' and externalRefGUID='c0fb04c2-a0c9-4893-b02a-e8e1897c35fb';
+update Integration.bill.BillImage set externalRefGUID = null where billImageId = '1000003' and externalRefGUID='393a93ea-bb20-4941-b675-e692b18660f5';
+update Integration.bill.BillImage set externalRefGUID = null where billImageId = '1000029' and externalRefGUID='7bc2cff3-ca69-41e1-ad00-8ae6aa9fd3d8';

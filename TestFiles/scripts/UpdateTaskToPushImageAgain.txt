@@ -1,0 +1,4 @@
+update Integration.dbo.Task set taskStatus='Ready',processCounter=0,batchId=null where taskId = '6000111' and companyCode='AIC';
+update Integration.dbo.Task set taskStatus='Ready',processCounter=0,batchId=null where taskId = '6000211' and companyCode='BOG';
+update Integration.dbo.Task set taskStatus='Ready',processCounter=0,batchId=null where taskId = '6000115' and companyCode='AIC';
+update Integration.dbo.Task set taskStatus='Ready',processCounter=0,batchId=null where taskId = '6000311' and companyCode='CWG';
