@@ -26,13 +26,72 @@ If either command fails, Docker Desktop is not fully started — wait 30 seconds
 
 ---
 
-## Step 2 — Clone the Repository
+## Step 2 — Connect GitHub and Clone the Repository
+
+> **Important:** GitHub no longer accepts your account password for Git.
+> You must create a **Personal Access Token (PAT)** and use it in place of your password.
+
+### 2a — Create a Personal Access Token (PAT)
+
+1. Open your browser and go to: https://github.com/settings/tokens/new
+   *(or: GitHub → Profile photo → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token)*
+
+2. Fill in the form:
+   - **Note:** `CanUDartMe clone` (any label you like)
+   - **Expiration:** 90 days (or No expiration for personal machines)
+   - **Scopes:** tick **`repo`** (this covers read/write to all your repositories)
+
+3. Scroll down and click **"Generate token"**
+
+4. **Copy the token immediately** — GitHub shows it only once.
+   It looks like: `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+> Store it somewhere safe (e.g. Notepad, password manager) — you'll need it below.
+
+---
+
+### 2b — Tell Git who you are (first-time setup only)
+
+```powershell
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+---
+
+### 2c — Clone using your username and token
+
+```powershell
+git clone https://YOUR_GITHUB_USERNAME:YOUR_TOKEN@github.com/nikhilgupta4879/CanUDartMe.git
+```
+
+**Example** (replace with your real username and token):
+
+```powershell
+git clone https://john:ghp_abc123xyz456@github.com/nikhilgupta4879/CanUDartMe.git
+```
+
+> The token goes where the password would normally go.
+
+---
+
+### 2d — Alternative: Windows Credential Manager (enter token once, saved automatically)
+
+If you prefer not to put the token in the URL, use the standard clone URL and let Windows save it:
 
 ```powershell
 git clone https://github.com/nikhilgupta4879/CanUDartMe.git
 ```
 
-Move into the project folder:
+Git will open a login popup:
+- **Username:** your GitHub username
+- **Password:** paste your PAT (not your GitHub password)
+
+Windows Credential Manager saves this — you won't be asked again on this machine.
+
+---
+
+### 2e — Move into the project folder
 
 ```powershell
 cd CanUDartMe
